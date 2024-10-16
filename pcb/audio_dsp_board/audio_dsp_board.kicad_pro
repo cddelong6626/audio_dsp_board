@@ -386,6 +386,18 @@
     [
       "47a31849-12f5-4027-80ad-c2184899235a",
       "Root"
+    ],
+    [
+      "673563af-5ca4-4add-a3f1-f895e6b03a9a",
+      "Audio"
+    ],
+    [
+      "d103698c-6ba7-4abd-b12f-7430fa80e3a4",
+      "MCU"
+    ],
+    [
+      "a7de0994-bf05-4e02-b677-cab45f8bb969",
+      "USB and Power"
     ]
   ],
   "text_variables": {}

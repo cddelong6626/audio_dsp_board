@@ -19,7 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include "usb_host.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -43,6 +42,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 I2S_HandleTypeDef hi2s2;
+DMA_HandleTypeDef hdma_spi2_tx;
+DMA_HandleTypeDef hdma_i2s2_ext_rx;
 
 SPI_HandleTypeDef hspi1;
 
@@ -60,7 +61,8 @@ const osThreadAttr_t defaultTask_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_USB_OTG_FS_PCD_Init(void);
+static void MX_DMA_Init(void);
+static void MX_USB_OTG_FS_USB_Init(void);
 static void MX_I2S2_Init(void);
 static void MX_SPI1_Init(void);
 void StartDefaultTask(void *argument);
@@ -103,7 +105,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USB_OTG_FS_PCD_Init();
+  MX_DMA_Init();
+  MX_USB_OTG_FS_USB_Init();
   MX_I2S2_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
@@ -279,7 +282,7 @@ static void MX_SPI1_Init(void)
   * @param None
   * @retval None
   */
-void MX_USB_OTG_FS_USB_Init(void)
+static void MX_USB_OTG_FS_USB_Init(void)
 {
 
   /* USER CODE BEGIN USB_OTG_FS_Init 0 */
@@ -296,6 +299,25 @@ void MX_USB_OTG_FS_USB_Init(void)
 }
 
 /**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Stream3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream3_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream3_IRQn);
+  /* DMA1_Stream4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -308,9 +330,9 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pins : PA10 PA11 PA12 */
   GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12;
@@ -337,8 +359,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* init code for USB_HOST */
-  MX_USB_HOST_Init();
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
