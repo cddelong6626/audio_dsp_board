@@ -2712,7 +2712,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T"
 			(at 123.19 113.9952 0)
 			(effects
 				(font
@@ -2981,7 +2981,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal"
 			(at 246.38 72.39 0)
 			(effects
 				(font
@@ -3255,7 +3255,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 205.74 114.808 90)
 			(effects
 				(font
@@ -3322,7 +3322,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T"
 			(at 123.19 122.8852 0)
 			(effects
 				(font
@@ -3656,7 +3656,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
 			(at 147.32 69.088 90)
 			(effects
 				(font
@@ -4322,7 +4322,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal"
 			(at 246.38 106.68 0)
 			(effects
 				(font

@@ -10,8 +10,8 @@
 	)
 	(lib_symbols)
 	(sheet
-		(at 54.61 111.76)
-		(size 29.21 29.21)
+		(at 171.45 80.01)
+		(size 30.48 27.94)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -22,7 +22,7 @@
 		)
 		(uuid "673563af-5ca4-4add-a3f1-f895e6b03a9a")
 		(property "Sheetname" "Audio"
-			(at 54.61 111.0484 0)
+			(at 171.45 79.2984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31,7 +31,7 @@
 			)
 		)
 		(property "Sheetfile" "audio.kicad_sch"
-			(at 54.61 141.5546 0)
+			(at 171.45 108.5346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48,8 +48,8 @@
 		)
 	)
 	(sheet
-		(at 97.79 74.93)
-		(size 29.21 22.86)
+		(at 124.46 80.01)
+		(size 30.48 27.94)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -60,7 +60,7 @@
 		)
 		(uuid "a7de0994-bf05-4e02-b677-cab45f8bb969")
 		(property "Sheetname" "USB and Power"
-			(at 97.79 74.2184 0)
+			(at 124.46 79.2984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -69,7 +69,7 @@
 			)
 		)
 		(property "Sheetfile" "usb_power.kicad_sch"
-			(at 97.79 98.3746 0)
+			(at 124.46 108.5346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -86,8 +86,8 @@
 		)
 	)
 	(sheet
-		(at 54.61 76.2)
-		(size 25.4 24.13)
+		(at 77.47 80.01)
+		(size 30.48 27.94)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -98,7 +98,7 @@
 		)
 		(uuid "d103698c-6ba7-4abd-b12f-7430fa80e3a4")
 		(property "Sheetname" "MCU"
-			(at 54.61 75.4884 0)
+			(at 77.47 79.2984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -107,7 +107,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 54.61 100.9146 0)
+			(at 77.47 108.5346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
