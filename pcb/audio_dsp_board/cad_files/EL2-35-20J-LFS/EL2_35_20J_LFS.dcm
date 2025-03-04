@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP EL2_35_20J_LFS
+D Tactile Switches 6.2x6.2x3.5mm 2N Operating Force
+K
+F https://www.ckswitches.com/media/3758/el2.pdf
+$ENDCMP
+#
+#End Doc Library
